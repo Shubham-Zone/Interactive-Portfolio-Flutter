@@ -501,7 +501,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       SizedBox(
                         width: mq.width * 0.7,
-                        child: Lottie.asset("assets/lottie/animation1.json",
+                        child: Image.asset("assets/images/lottie2.json",
                             fit: BoxFit.cover),
                       ),
                       SizedBox(
@@ -662,7 +662,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.7,
-                        child: Lottie.asset("assets/lottie/animation4.json",
+                        child: Image.asset("assets/images/lottie1.json",
                             fit: BoxFit.cover),
                       ),
                       const SizedBox(
