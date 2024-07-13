@@ -501,7 +501,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       SizedBox(
                         width: mq.width * 0.7,
-                        child: Image.asset("assets/images/lottie2.json",
+                        child: Image.asset("assets/images/self.png",
                             fit: BoxFit.cover),
                       ),
                       SizedBox(
@@ -662,7 +662,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       SizedBox(
                         width: MediaQuery.of(context).size.width * 0.7,
-                        child: Image.asset("assets/images/lottie1.json",
+                        child: Image.asset("assets/images/lottie3.png",
                             fit: BoxFit.cover),
                       ),
                       const SizedBox(
@@ -929,12 +929,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   )
-                : FlipCard(
-                    rotateSide: RotateSide.right,
-                    onTapFlipping: true,
-                    axis: FlipAxis.horizontal,
-                    controller: controller,
-                    frontWidget: Center(
+                : Center(    
                         child: Container(
                       width: MediaQuery.of(context).size.width * 0.9,
                       decoration: BoxDecoration(
@@ -987,53 +982,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     )),
-                    backWidget: Container(
-                      width: MediaQuery.of(context).size.width * 0.9,
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 16,
-                            offset: const Offset(0, 8),
-                          ),
-                        ],
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.black.withOpacity(0.6),
-                            Colors.black.withOpacity(0.3)
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                      ),
-                      child: Center(
-                        child: SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.8,
-                          child: const Padding(
-                            padding: EdgeInsets.all(20),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Center(
-                                  child: Text(
-                                    'Achievements',
-                                    textAlign: TextAlign.center,
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.blue,
-                                      fontSize: 18,
-                                    ),
-                                  ),
-                                )
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                    
           ),
 
           const SizedBox(height: 20),
@@ -1180,12 +1129,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   )
-                : FlipCard(
-                    rotateSide: RotateSide.left,
-                    onTapFlipping: true,
-                    axis: FlipAxis.horizontal,
-                    controller: controller,
-                    frontWidget: Center(
+                : Center(   
                         child: Container(
                       width: MediaQuery.of(context).size.width * 0.9,
                       decoration: BoxDecoration(
@@ -1249,51 +1193,7 @@ class _HomePageState extends State<HomePage> {
                         ),
                       ),
                     )),
-                    backWidget: Container(
-                      width: MediaQuery.of(context).size.width * 0.9,
-                      height: MediaQuery.of(context).size.height * 0.5,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(24),
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.black.withOpacity(0.1),
-                            blurRadius: 16,
-                            offset: const Offset(0, 8),
-                          ),
-                        ],
-                        gradient: LinearGradient(
-                          colors: [
-                            Colors.black.withOpacity(0.6),
-                            Colors.black.withOpacity(0.3)
-                          ],
-                          begin: Alignment.topLeft,
-                          end: Alignment.bottomRight,
-                        ),
-                      ),
-                      child: Center(
-                        child: SizedBox(
-                          width: MediaQuery.of(context).size.width * 0.8,
-                          child: const Padding(
-                            padding: EdgeInsets.all(20),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Open Source Contributions',
-                                  textAlign: TextAlign.center,
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.blue,
-                                    fontSize: 18,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                    
           ),
           const SizedBox(height: 40),
         ],

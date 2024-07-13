@@ -28,11 +28,12 @@ class PortfolioWidget extends StatelessWidget {
                 final duration = document['Duration'];
                 final technologies = document['Technologies'];
                 final img = document["img"];
-                List urls = ["https://github.com/Shubham-Zone/Portfolio-website", "https://github.com/Shubham-Zone/Hackingly_project", "https://github.com/Shubham-Zone/CampusCaf-Flutter"];
+                final git = document["github"];
+                // List urls = ["https://github.com/Shubham-Zone/Portfolio-website", "https://github.com/Shubham-Zone/Hackingly_project", "https://github.com/Shubham-Zone/CampusCaf-Flutter"];
   
 
                 return ProjectDetailsPage(
-                    title, detail, img, technologies, duration, urls[index]);
+                    title, detail, img, technologies, duration, git);
               });
         }
         if (snapshot.hasError) {
@@ -193,7 +194,7 @@ class ProjectDetailsPage extends StatelessWidget {
   final List<dynamic> imageUrl;
   final String technologies;
   final String duration;
-  final String url;
+  final String git;
 
   const ProjectDetailsPage(
     this.title,
@@ -201,7 +202,7 @@ class ProjectDetailsPage extends StatelessWidget {
     this.imageUrl,
     this.technologies,
     this.duration,
-    this.url, {
+    this.git, {
     Key? key,
   }) : super(key: key);
 
@@ -218,7 +219,7 @@ class ProjectDetailsPage extends StatelessWidget {
               Text(title, style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 20),),
               const SizedBox(width: 1,),
               IconButton(onPressed: (){
-                _launchURL(url);
+                _launchURL(git);
               }, icon: const Icon(Icons.arrow_outward_outlined, color: Colors.blue,))
             ],
           ),
@@ -273,7 +274,7 @@ class ProjectDetailsPage extends StatelessWidget {
                                   .width, // Adjusted width to fit the screen
                               height: constraints.maxWidth *
                                   0.5, // Set height based on width constraints for a flexible aspect ratio
-                              fitWeb: BoxFitWeb.fill,
+                              fitWeb: BoxFitWeb.contain,
                               duration: 1500,
                               curve: Curves.easeIn,
                               onPointer: true,
