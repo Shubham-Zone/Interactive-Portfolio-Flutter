@@ -29,8 +29,6 @@ class PortfolioWidget extends StatelessWidget {
                 final technologies = document['Technologies'];
                 final img = document["img"];
                 final git = document["github"];
-                // List urls = ["https://github.com/Shubham-Zone/Portfolio-website", "https://github.com/Shubham-Zone/Hackingly_project", "https://github.com/Shubham-Zone/CampusCaf-Flutter"];
-  
 
                 return ProjectDetailsPage(
                     title, detail, img, technologies, duration, git);
@@ -272,8 +270,7 @@ class ProjectDetailsPage extends StatelessWidget {
                               width: MediaQuery.of(context)
                                   .size
                                   .width, // Adjusted width to fit the screen
-                              height: constraints.maxWidth *
-                                  0.5, // Set height based on width constraints for a flexible aspect ratio
+                              height: constraints.maxWidth * 0.4, // Set height based on width constraints for a flexible aspect ratio
                               fitWeb: BoxFitWeb.contain,
                               duration: 1500,
                               curve: Curves.easeIn,
