@@ -34,7 +34,7 @@ class SocialMediaHandlesWidget extends StatelessWidget {
               _buildSocialMediaCard(
                 icon: Icons.computer,
                 title: 'LeetCode',
-                url: 'https://leetcode.com/u/DeveloperShubham_/',
+                url: 'https://leetcode.com/u/ShubhamBytes/',
               ),
               _buildSocialMediaCard(
                 icon: Icons.computer,

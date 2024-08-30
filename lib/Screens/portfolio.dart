@@ -229,22 +229,22 @@ class ProjectDetailsPage extends StatelessWidget {
                   child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                        decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.grey.withOpacity(0.5),
-                              spreadRadius: 5,
-                              blurRadius: 7,
-                              offset: const Offset(
-                                  0, 3), // changes position of shadow
-                            ),
-                          ],
-                          borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: Colors.grey[400]!,
-                            width: 2,
-                          ),
-                        ),
+                        // decoration: BoxDecoration(
+                        //   boxShadow: [
+                        //     BoxShadow(
+                        //       color: Colors.grey.withOpacity(0.5),
+                        //       spreadRadius: 5,
+                        //       blurRadius: 7,
+                        //       offset: const Offset(
+                        //           0, 3), // changes position of shadow
+                        //     ),
+                        //   ],
+                        //   borderRadius: BorderRadius.circular(10),
+                        //   border: Border.all(
+                        //     color: Colors.grey[400]!,
+                        //     width: 2,
+                        //   ),
+                        // ),
                         child: LayoutBuilder(
                           builder: (context, constraints) {
                             return ImageNetwork(
